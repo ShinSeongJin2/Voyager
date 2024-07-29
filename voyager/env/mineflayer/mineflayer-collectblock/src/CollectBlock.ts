@@ -206,7 +206,7 @@ async function mineBlock(
         }
     });
     try {
-        await bot.dig(block);
+        await bot.dig(block as any);
         // Waiting for items to drop
         await new Promise<void>((resolve) => {
             let remainingTicks = 10;
